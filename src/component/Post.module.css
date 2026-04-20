@@ -1,0 +1,31 @@
+.container {
+    padding: 24px;
+    border: none; /* הורדת המסגרת למראה נקי */
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* צל עמוק ורך יותר */
+    max-width: 550px;
+    margin: 20px auto; /* מרכוז הקופסה */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* אפקט קטן כשמעבירים את העכבר */
+.container:hover {
+    transform: translateY(-4px);
+}
+
+.name {
+    color: #1a202c; /* כחול-כהה מאוד, נראה יותר יוקרתי משחור */
+    font-size: 1.25rem; /* הגדלת הכותרת */
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: -0.025em;
+    font-family: sans-serif;
+}
+
+.content {
+    color: #4a5568; /* אפור פלדה, נעים יותר לקריאה */
+    font-size: 1rem;
+    line-height: 1.6; /* הגדלת הריווח בין השורות לקריאות טובה יותר */
+    margin: 0;
+}
