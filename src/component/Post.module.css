@@ -1,31 +1,102 @@
+/* המכולה הראשית של הפוסט - הגדרות גודל ונוכחות */
 .container {
-    padding: 24px;
-    border: none; /* הורדת המסגרת למראה נקי */
-    border-radius: 12px;
+    max-width: 800px; /* כרטיס רחב ומרשים */
+    padding: 40px; /* מרווח פנימי נדיב */
+    border: none; 
+    border-radius: 16px; 
     background-color: #ffffff;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* צל עמוק ורך יותר */
-    max-width: 550px;
-    margin: 20px auto; /* מרכוז הקופסה */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); 
+    margin: 30px auto; 
     transition: transform 0.2s ease-in-out;
 }
 
-/* אפקט קטן כשמעבירים את העכבר */
 .container:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
 }
 
+/* כותרת הפוסט (שם הכותב) */
 .name {
-    color: #1a202c; /* כחול-כהה מאוד, נראה יותר יוקרתי משחור */
-    font-size: 1.25rem; /* הגדלת הכותרת */
-    font-weight: 700;
-    margin-bottom: 12px;
+    color: #1a202c; 
+    font-size: 1.75rem; 
+    font-weight: 800;
+    margin-bottom: 16px;
     letter-spacing: -0.025em;
     font-family: sans-serif;
 }
 
+/* תוכן הפוסט במצב תצוגה */
 .content {
-    color: #4a5568; /* אפור פלדה, נעים יותר לקריאה */
+    color: #4a5568; 
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+/* --- אזור עריכה --- */
+
+.editSection {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+/* שדה הקלט (Input) מוגדל */
+.input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: #2d3748;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input:focus {
+    border-color: #3182ce;
+}
+
+/* קבוצת הכפתורים */
+.buttonGroup {
+    display: flex;
+    gap: 12px;
+}
+
+/* עיצוב בסיסי לכפתורים */
+.button {
+    padding: 12px 24px;
     font-size: 1rem;
-    line-height: 1.6; /* הגדלת הריווח בין השורות לקריאות טובה יותר */
-    margin: 0;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+/* כפתור Edit ו-Save (צבע כחול) */
+.button {
+    background-color: #3182ce;
+    color: white;
+}
+
+.button:hover {
+    background-color: #2b6cb0;
+}
+
+/* כפתור Cancel (צבע ניטרלי) */
+.buttonCancel {
+    background-color: #edf2f7;
+    color: #4a5568;
+}
+
+.buttonCancel:hover {
+    background-color: #e2e8f0;
+}
+
+/* סידור פנימי של התוכן והכפתור במצב רגיל */
+.displaySection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
